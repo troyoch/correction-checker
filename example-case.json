@@ -1,0 +1,7 @@
+{
+  "initial": "prose",
+  "corrected": "bullets",
+  "teach": "My preferred report format is prose.",
+  "correction": "Correction: my preferred report format is now bullets.",
+  "probe": "What is my preferred report format?"
+}
