@@ -1,0 +1,23 @@
+{
+  "rows": [
+    {
+      "id": "4f6547d4-fe66-4395-864b-70c1949b3f3f",
+      "memory_type": "preference",
+      "title": "Concert preference",
+      "memory_key": "concert",
+      "detail": "Rowan prefers quiet concerts, not crowded concerts.",
+      "user_id": "7",
+      "active": true
+    },
+    {
+      "id": "project",
+      "memory_type": "fact",
+      "title": "Project",
+      "memory_key": "project",
+      "detail": "Rowan is building a miniature observatory.",
+      "user_id": "7",
+      "active": true
+    }
+  ],
+  "memory_summaries": {}
+}

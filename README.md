@@ -8,7 +8,7 @@ Experimental, provider-independent developer tooling for checking whether a corr
 
 ## Run locally
 
-Requires Python 3.10 or newer. No third-party packages or API key are required for demonstrations. Download this repository, open a terminal in its folder, and run:
+Requires Python 3.10 or newer. No third-party packages or API key are required for demonstrations. Download the [v0.2.1 source ZIP](https://github.com/troyoch/correction-checker/archive/refs/tags/v0.2.1.zip) for the unchanged checker release, or use **Code > Download ZIP** on this branch for the proposed research supplement. Extract the ZIP, open a terminal in the extracted folder (the one containing checker.py), and run:
 
 ```sh
 python -m unittest discover -s . -p "test_*.py"
@@ -23,7 +23,7 @@ python checker.py --out runs/summary-fault -- python demo_adapter.py stale_summa
 python checker.py --out runs/missing -- python demo_adapter.py missing_storage
 ```
 
-Exit codes: **0 passed**, **1 failed**, **2 inconclusive**. The failure demonstrations intentionally return nonzero. Execution status “completed” is distinct from the test outcome. Reports for all four modes are in [examples](examples).
+Exit codes: **0 passed**, **1 failed**, **2 inconclusive**. The failure demonstrations intentionally return nonzero. Execution status “completed” is distinct from the test outcome. See the [healthy sample report](examples/healthy.md) and [all four reports](examples). Expected outcomes are healthy=passed, skip_save=failed, stale_summary=failed, missing_storage=inconclusive.
 
 ## Connect your assistant
 
@@ -53,4 +53,15 @@ This tool accompanies the draft *Tracing Corrections Through AI Companion Memory
 
 ## License and contribution
 
-New code and documentation in this repository are MIT licensed. No Evo source code or private conversations are included. To contribute a connector, document actual reset behavior, unavailable evidence, cost controls, synthetic test results and limitations. Do not claim universal compatibility from interface support alone.
+The checker and its developer documentation are MIT licensed. Historical research materials and the manuscript are excluded from that blanket license; see [license scope](research/LICENSE_SCOPE.md). No Evo source code or private conversations are included. To contribute a connector, document actual reset behavior, unavailable evidence, cost controls, synthetic test results and limitations. Do not claim universal compatibility from interface support alone.
+
+## Research supplement (proposed)
+
+Start with the [research-evidence guide](research/README.md) for the table-to-file map, preserved model responses, privacy review and offline reproduction commands. The nine checker tests do not reproduce every paper experiment.
+
+```sh
+python research/verify.py
+python research/verify.py --offline
+```
+
+The first verifies recorded evidence; the second also reruns the applicable synthetic research checks in temporary directories. Neither calls a model. A research-supplement release is being prepared as a **draft**, not a published release. The existing v0.2.1 tag is unchanged. See [CONTRIBUTING.md](CONTRIBUTING.md) to propose a connector; no paid integration is included.

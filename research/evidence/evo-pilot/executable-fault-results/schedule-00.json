@@ -1,0 +1,84 @@
+{
+  "id": "schedule-00",
+  "trace": {
+    "expected": "Tuesday",
+    "accepted_gate_output": [
+      "Tuesday"
+    ],
+    "storage": [
+      "Tuesday"
+    ],
+    "retrieval": [
+      "Tuesday"
+    ]
+  },
+  "gate_status": {
+    "accepted": true,
+    "reason": "authorized_exact_revision"
+  },
+  "gate_rows": [
+    {
+      "id": "original",
+      "user_id": 7,
+      "memory_type": "preference",
+      "title": "schedule",
+      "memory_key": "schedule",
+      "detail": "Friday",
+      "active": false,
+      "superseded_by": "388cf20e-d150-49da-ba66-73bf58379263"
+    },
+    {
+      "user_id": 7,
+      "memory_type": "preference",
+      "title": "schedule",
+      "memory_key": "schedule",
+      "detail": "Tuesday",
+      "id": "388cf20e-d150-49da-ba66-73bf58379263",
+      "active": true,
+      "supersedes": "original",
+      "revision_evidence": "e1"
+    }
+  ],
+  "reopened_rows": [
+    {
+      "id": "original",
+      "user_id": 7,
+      "memory_type": "preference",
+      "title": "schedule",
+      "memory_key": "schedule",
+      "detail": "Friday",
+      "active": false,
+      "superseded_by": "388cf20e-d150-49da-ba66-73bf58379263"
+    },
+    {
+      "user_id": 7,
+      "memory_type": "preference",
+      "title": "schedule",
+      "memory_key": "schedule",
+      "detail": "Tuesday",
+      "id": "388cf20e-d150-49da-ba66-73bf58379263",
+      "active": true,
+      "supersedes": "original",
+      "revision_evidence": "e1"
+    }
+  ],
+  "selected_rows": [
+    {
+      "user_id": 7,
+      "memory_type": "preference",
+      "title": "schedule",
+      "memory_key": "schedule",
+      "detail": "Tuesday",
+      "id": "388cf20e-d150-49da-ba66-73bf58379263",
+      "active": true,
+      "supersedes": "original",
+      "revision_evidence": "e1"
+    }
+  ],
+  "diagnosis": "no_observed_divergence",
+  "injected_condition": "healthy",
+  "expected_diagnosis": "no_observed_divergence",
+  "diagnosis_matches": true,
+  "retrieval_correct": true,
+  "model_response": "not_tested"
+}

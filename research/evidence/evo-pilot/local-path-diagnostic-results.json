@@ -1,0 +1,71 @@
+{
+    "scope": "Original transcribed context function; synthetic adapters; not full Evo",
+    "passed": 5,
+    "total": 5,
+    "api_calls": 0,
+    "conditions": {
+        "both": {
+            "context": "Continuity summary: For the fictional project, weekly reports are sent Friday.\n[fact] Report schedule: For the fictional project, weekly reports are now sent Tuesday.",
+            "calls": [
+                {
+                    "helper": "fixture_fetch",
+                    "uid": 7,
+                    "limit": 220,
+                    "include_archived": true
+                }
+            ],
+            "friday": true,
+            "tuesday": true,
+            "passed": true
+        },
+        "no_summary": {
+            "context": "[fact] Report schedule: For the fictional project, weekly reports are now sent Tuesday.",
+            "calls": [
+                {
+                    "helper": "fixture_fetch",
+                    "uid": 7,
+                    "limit": 220,
+                    "include_archived": true
+                }
+            ],
+            "friday": false,
+            "tuesday": true,
+            "passed": true
+        },
+        "no_records": {
+            "context": "Continuity summary: For the fictional project, weekly reports are sent Friday.",
+            "calls": [
+                {
+                    "helper": "fixture_fetch",
+                    "uid": 7,
+                    "limit": 220,
+                    "include_archived": true
+                }
+            ],
+            "friday": true,
+            "tuesday": false,
+            "passed": true
+        },
+        "neither": {
+            "context": "",
+            "calls": [
+                {
+                    "helper": "fixture_fetch",
+                    "uid": 7,
+                    "limit": 220,
+                    "include_archived": true
+                }
+            ],
+            "friday": false,
+            "tuesday": false,
+            "passed": true
+        },
+        "global_off": {
+            "context": "",
+            "calls": [],
+            "friday": false,
+            "tuesday": false,
+            "passed": true
+        }
+    }
+}

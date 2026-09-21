@@ -1,0 +1,7 @@
+{
+  "runs": 6,
+  "diagnosis_matches": 6,
+  "retrieval_correct": 2,
+  "api_calls": 0,
+  "scope": "Candidate gate plus SQLite adapter; two development cases; single injected faults; no model"
+}

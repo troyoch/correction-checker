@@ -1,0 +1,50 @@
+{
+  "arm": "accepted",
+  "step": "retrieve",
+  "state": {
+    "rows": [
+      {
+        "id": "original",
+        "user_id": 7,
+        "memory_type": "preference",
+        "memory_key": "concert",
+        "title": "Concert preference",
+        "detail": "Rowan prefers crowded concerts.",
+        "active": false,
+        "superseded_by": "4f6547d4-fe66-4395-864b-70c1949b3f3f"
+      },
+      {
+        "user_id": 7,
+        "memory_type": "preference",
+        "title": "Concert preference",
+        "memory_key": "concert",
+        "detail": "Rowan prefers quiet concerts, not crowded concerts.",
+        "id": "4f6547d4-fe66-4395-864b-70c1949b3f3f",
+        "active": true,
+        "supersedes": "original",
+        "revision_evidence": "correction-1"
+      }
+    ],
+    "memory_summaries": {},
+    "events": [
+      "Discussed a fictional weather report.",
+      "Discussed a fictional train timetable.",
+      "Discussed a fictional recipe."
+    ],
+    "used_evidence": [
+      "correction-1"
+    ],
+    "summary_history": [
+      {
+        "user_id": 7,
+        "summary": "Rowan prefers crowded concerts.",
+        "evidence_ref": "correction-1"
+      }
+    ]
+  },
+  "status": {},
+  "retrieved_context": [
+    "Rowan prefers quiet concerts, not crowded concerts."
+  ],
+  "omitted_count": 0
+}

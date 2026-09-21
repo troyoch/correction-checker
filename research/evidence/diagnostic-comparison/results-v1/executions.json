@@ -1,0 +1,4450 @@
+[
+  {
+    "id": "schedule-00000",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": false,
+      "retrieval_fault": false,
+      "response_fault": false,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "Tuesday",
+      "storage": "Tuesday",
+      "retrieval": "Tuesday",
+      "response": "Tuesday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        0
+      ],
+      [
+        1,
+        "Tuesday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "none_observed",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Tuesday",
+          "retrieval": "Tuesday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Tuesday\nretrieval=Tuesday\nresponse=Tuesday",
+        "trace_diagnosis": "none_observed",
+        "log_diagnosis": "none_observed"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "retrieval": "Tuesday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nretrieval=Tuesday\nresponse=Tuesday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Tuesday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Tuesday\nresponse=Tuesday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Tuesday"
+        },
+        "ordinary_log": "response=Tuesday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-00001",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": false,
+      "retrieval_fault": false,
+      "response_fault": false,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "Tuesday",
+      "storage": "Tuesday",
+      "retrieval": "Tuesday",
+      "response": "Tuesday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        0
+      ],
+      [
+        1,
+        "Tuesday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "none_observed",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Tuesday",
+          "retrieval": "Tuesday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Tuesday\nretrieval=Tuesday\nresponse=Tuesday",
+        "trace_diagnosis": "none_observed",
+        "log_diagnosis": "none_observed"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "retrieval": "Tuesday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nretrieval=Tuesday\nresponse=Tuesday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Tuesday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Tuesday\nresponse=Tuesday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Tuesday"
+        },
+        "ordinary_log": "response=Tuesday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-00010",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": false,
+      "retrieval_fault": false,
+      "response_fault": true,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "Tuesday",
+      "storage": "Tuesday",
+      "retrieval": "Tuesday",
+      "response": "Friday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        0
+      ],
+      [
+        1,
+        "Tuesday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "response",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Tuesday",
+          "retrieval": "Tuesday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Tuesday\nretrieval=Tuesday\nresponse=Friday",
+        "trace_diagnosis": "response",
+        "log_diagnosis": "response"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "retrieval": "Tuesday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nretrieval=Tuesday\nresponse=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Tuesday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Tuesday\nresponse=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Friday"
+        },
+        "ordinary_log": "response=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-00011",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": false,
+      "retrieval_fault": false,
+      "response_fault": true,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "Tuesday",
+      "storage": "Tuesday",
+      "retrieval": "Tuesday",
+      "response": "Friday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        0
+      ],
+      [
+        1,
+        "Tuesday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "response",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Tuesday",
+          "retrieval": "Tuesday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Tuesday\nretrieval=Tuesday\nresponse=Friday",
+        "trace_diagnosis": "response",
+        "log_diagnosis": "response"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "retrieval": "Tuesday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nretrieval=Tuesday\nresponse=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Tuesday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Tuesday\nresponse=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Friday"
+        },
+        "ordinary_log": "response=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-00100",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": false,
+      "retrieval_fault": true,
+      "response_fault": false,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "Tuesday",
+      "storage": "Tuesday",
+      "retrieval": "Friday",
+      "response": "Friday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        0
+      ],
+      [
+        1,
+        "Tuesday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "retrieval",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Tuesday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Tuesday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "retrieval",
+        "log_diagnosis": "retrieval"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Tuesday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Tuesday\nresponse=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Friday"
+        },
+        "ordinary_log": "response=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-00101",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": false,
+      "retrieval_fault": true,
+      "response_fault": false,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "Tuesday",
+      "storage": "Tuesday",
+      "retrieval": "Tuesday",
+      "response": "Tuesday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        0
+      ],
+      [
+        1,
+        "Tuesday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "none_observed",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Tuesday",
+          "retrieval": "Tuesday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Tuesday\nretrieval=Tuesday\nresponse=Tuesday",
+        "trace_diagnosis": "none_observed",
+        "log_diagnosis": "none_observed"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "retrieval": "Tuesday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nretrieval=Tuesday\nresponse=Tuesday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Tuesday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Tuesday\nresponse=Tuesday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Tuesday"
+        },
+        "ordinary_log": "response=Tuesday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-00110",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": false,
+      "retrieval_fault": true,
+      "response_fault": true,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "Tuesday",
+      "storage": "Tuesday",
+      "retrieval": "Friday",
+      "response": "Friday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        0
+      ],
+      [
+        1,
+        "Tuesday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "retrieval",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Tuesday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Tuesday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "retrieval",
+        "log_diagnosis": "retrieval"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Tuesday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Tuesday\nresponse=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Friday"
+        },
+        "ordinary_log": "response=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-00111",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": false,
+      "retrieval_fault": true,
+      "response_fault": true,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "Tuesday",
+      "storage": "Tuesday",
+      "retrieval": "Tuesday",
+      "response": "Friday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        0
+      ],
+      [
+        1,
+        "Tuesday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "response",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Tuesday",
+          "retrieval": "Tuesday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Tuesday\nretrieval=Tuesday\nresponse=Friday",
+        "trace_diagnosis": "response",
+        "log_diagnosis": "response"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "retrieval": "Tuesday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nretrieval=Tuesday\nresponse=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Tuesday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Tuesday\nresponse=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Friday"
+        },
+        "ordinary_log": "response=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-01000",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": true,
+      "retrieval_fault": false,
+      "response_fault": false,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "Tuesday",
+      "storage": "Friday",
+      "retrieval": "Friday",
+      "response": "Friday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "storage",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Friday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Friday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Friday\nresponse=Friday",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Friday"
+        },
+        "ordinary_log": "response=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-01001",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": true,
+      "retrieval_fault": false,
+      "response_fault": false,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "Tuesday",
+      "storage": "Friday",
+      "retrieval": "Tuesday",
+      "response": "Tuesday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "storage",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Friday",
+          "retrieval": "Tuesday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Friday\nretrieval=Tuesday\nresponse=Tuesday",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "retrieval": "Tuesday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nretrieval=Tuesday\nresponse=Tuesday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Friday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Friday\nresponse=Tuesday",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Tuesday"
+        },
+        "ordinary_log": "response=Tuesday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-01010",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": true,
+      "retrieval_fault": false,
+      "response_fault": true,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "Tuesday",
+      "storage": "Friday",
+      "retrieval": "Friday",
+      "response": "Friday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "storage",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Friday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Friday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Friday\nresponse=Friday",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Friday"
+        },
+        "ordinary_log": "response=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-01011",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": true,
+      "retrieval_fault": false,
+      "response_fault": true,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "Tuesday",
+      "storage": "Friday",
+      "retrieval": "Tuesday",
+      "response": "Friday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "storage",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Friday",
+          "retrieval": "Tuesday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Friday\nretrieval=Tuesday\nresponse=Friday",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "retrieval": "Tuesday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nretrieval=Tuesday\nresponse=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Friday\nresponse=Friday",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Friday"
+        },
+        "ordinary_log": "response=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-01100",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": true,
+      "retrieval_fault": true,
+      "response_fault": false,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "Tuesday",
+      "storage": "Friday",
+      "retrieval": "Friday",
+      "response": "Friday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "storage",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Friday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Friday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Friday\nresponse=Friday",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Friday"
+        },
+        "ordinary_log": "response=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-01101",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": true,
+      "retrieval_fault": true,
+      "response_fault": false,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "Tuesday",
+      "storage": "Friday",
+      "retrieval": "Tuesday",
+      "response": "Tuesday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "storage",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Friday",
+          "retrieval": "Tuesday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Friday\nretrieval=Tuesday\nresponse=Tuesday",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "retrieval": "Tuesday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nretrieval=Tuesday\nresponse=Tuesday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Friday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Friday\nresponse=Tuesday",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Tuesday"
+        },
+        "ordinary_log": "response=Tuesday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-01110",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": true,
+      "retrieval_fault": true,
+      "response_fault": true,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "Tuesday",
+      "storage": "Friday",
+      "retrieval": "Friday",
+      "response": "Friday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "storage",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Friday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Friday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Friday\nresponse=Friday",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Friday"
+        },
+        "ordinary_log": "response=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-01111",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": true,
+      "retrieval_fault": true,
+      "response_fault": true,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "Tuesday",
+      "storage": "Friday",
+      "retrieval": "Tuesday",
+      "response": "Friday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "storage",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Friday",
+          "retrieval": "Tuesday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Friday\nretrieval=Tuesday\nresponse=Friday",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "retrieval": "Tuesday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nretrieval=Tuesday\nresponse=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Tuesday",
+          "storage": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Tuesday\nstorage=Friday\nresponse=Friday",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Friday"
+        },
+        "ordinary_log": "response=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-10000",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": false,
+      "retrieval_fault": false,
+      "response_fault": false,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "Friday",
+      "storage": "Friday",
+      "retrieval": "Friday",
+      "response": "Friday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        0
+      ],
+      [
+        1,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Friday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Friday"
+        },
+        "ordinary_log": "response=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-10001",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": false,
+      "retrieval_fault": false,
+      "response_fault": false,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "Friday",
+      "storage": "Friday",
+      "retrieval": "Tuesday",
+      "response": "Tuesday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        0
+      ],
+      [
+        1,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "retrieval": "Tuesday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nretrieval=Tuesday\nresponse=Tuesday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Friday",
+          "retrieval": "Tuesday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Friday\nretrieval=Tuesday\nresponse=Tuesday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nresponse=Tuesday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Tuesday"
+        },
+        "ordinary_log": "response=Tuesday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-10010",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": false,
+      "retrieval_fault": false,
+      "response_fault": true,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "Friday",
+      "storage": "Friday",
+      "retrieval": "Friday",
+      "response": "Friday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        0
+      ],
+      [
+        1,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Friday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Friday"
+        },
+        "ordinary_log": "response=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-10011",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": false,
+      "retrieval_fault": false,
+      "response_fault": true,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "Friday",
+      "storage": "Friday",
+      "retrieval": "Tuesday",
+      "response": "Friday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        0
+      ],
+      [
+        1,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "retrieval": "Tuesday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nretrieval=Tuesday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Friday",
+          "retrieval": "Tuesday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nretrieval=Tuesday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Friday"
+        },
+        "ordinary_log": "response=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-10100",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": false,
+      "retrieval_fault": true,
+      "response_fault": false,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "Friday",
+      "storage": "Friday",
+      "retrieval": "Friday",
+      "response": "Friday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        0
+      ],
+      [
+        1,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Friday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Friday"
+        },
+        "ordinary_log": "response=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-10101",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": false,
+      "retrieval_fault": true,
+      "response_fault": false,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "Friday",
+      "storage": "Friday",
+      "retrieval": "Tuesday",
+      "response": "Tuesday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        0
+      ],
+      [
+        1,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "retrieval": "Tuesday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nretrieval=Tuesday\nresponse=Tuesday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Friday",
+          "retrieval": "Tuesday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Friday\nretrieval=Tuesday\nresponse=Tuesday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nresponse=Tuesday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Tuesday"
+        },
+        "ordinary_log": "response=Tuesday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-10110",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": false,
+      "retrieval_fault": true,
+      "response_fault": true,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "Friday",
+      "storage": "Friday",
+      "retrieval": "Friday",
+      "response": "Friday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        0
+      ],
+      [
+        1,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Friday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Friday"
+        },
+        "ordinary_log": "response=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-10111",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": false,
+      "retrieval_fault": true,
+      "response_fault": true,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "Friday",
+      "storage": "Friday",
+      "retrieval": "Tuesday",
+      "response": "Friday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        0
+      ],
+      [
+        1,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "retrieval": "Tuesday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nretrieval=Tuesday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Friday",
+          "retrieval": "Tuesday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nretrieval=Tuesday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Friday"
+        },
+        "ordinary_log": "response=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-11000",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": true,
+      "retrieval_fault": false,
+      "response_fault": false,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "Friday",
+      "storage": "Friday",
+      "retrieval": "Friday",
+      "response": "Friday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Friday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Friday"
+        },
+        "ordinary_log": "response=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-11001",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": true,
+      "retrieval_fault": false,
+      "response_fault": false,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "Friday",
+      "storage": "Friday",
+      "retrieval": "Tuesday",
+      "response": "Tuesday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "retrieval": "Tuesday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nretrieval=Tuesday\nresponse=Tuesday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Friday",
+          "retrieval": "Tuesday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Friday\nretrieval=Tuesday\nresponse=Tuesday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nresponse=Tuesday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Tuesday"
+        },
+        "ordinary_log": "response=Tuesday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-11010",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": true,
+      "retrieval_fault": false,
+      "response_fault": true,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "Friday",
+      "storage": "Friday",
+      "retrieval": "Friday",
+      "response": "Friday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Friday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Friday"
+        },
+        "ordinary_log": "response=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-11011",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": true,
+      "retrieval_fault": false,
+      "response_fault": true,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "Friday",
+      "storage": "Friday",
+      "retrieval": "Tuesday",
+      "response": "Friday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "retrieval": "Tuesday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nretrieval=Tuesday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Friday",
+          "retrieval": "Tuesday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nretrieval=Tuesday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Friday"
+        },
+        "ordinary_log": "response=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-11100",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": true,
+      "retrieval_fault": true,
+      "response_fault": false,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "Friday",
+      "storage": "Friday",
+      "retrieval": "Friday",
+      "response": "Friday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Friday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Friday"
+        },
+        "ordinary_log": "response=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-11101",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": true,
+      "retrieval_fault": true,
+      "response_fault": false,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "Friday",
+      "storage": "Friday",
+      "retrieval": "Tuesday",
+      "response": "Tuesday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "retrieval": "Tuesday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nretrieval=Tuesday\nresponse=Tuesday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Friday",
+          "retrieval": "Tuesday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Friday\nretrieval=Tuesday\nresponse=Tuesday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "response": "Tuesday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nresponse=Tuesday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Tuesday"
+        },
+        "ordinary_log": "response=Tuesday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-11110",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": true,
+      "retrieval_fault": true,
+      "response_fault": true,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "Friday",
+      "storage": "Friday",
+      "retrieval": "Friday",
+      "response": "Friday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Friday",
+          "retrieval": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nretrieval=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Friday"
+        },
+        "ordinary_log": "response=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "schedule-11111",
+    "old": "Friday",
+    "expected": "Tuesday",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": true,
+      "retrieval_fault": true,
+      "response_fault": true,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "Friday",
+      "storage": "Friday",
+      "retrieval": "Tuesday",
+      "response": "Friday"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "Friday",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "retrieval": "Tuesday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nretrieval=Tuesday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "Friday",
+          "retrieval": "Tuesday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nretrieval=Tuesday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "Friday",
+          "storage": "Friday",
+          "response": "Friday"
+        },
+        "ordinary_log": "acquisition=Friday\nstorage=Friday\nresponse=Friday",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "Friday"
+        },
+        "ordinary_log": "response=Friday",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-00000",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": false,
+      "retrieval_fault": false,
+      "response_fault": false,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "bullets",
+      "storage": "bullets",
+      "retrieval": "bullets",
+      "response": "bullets"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        0
+      ],
+      [
+        1,
+        "bullets",
+        1
+      ]
+    ],
+    "first_observed_divergence": "none_observed",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "bullets",
+          "retrieval": "bullets",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=bullets\nretrieval=bullets\nresponse=bullets",
+        "trace_diagnosis": "none_observed",
+        "log_diagnosis": "none_observed"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "bullets",
+          "retrieval": "bullets",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=bullets\nretrieval=bullets\nresponse=bullets",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "bullets",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=bullets\nresponse=bullets",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "bullets"
+        },
+        "ordinary_log": "response=bullets",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-00001",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": false,
+      "retrieval_fault": false,
+      "response_fault": false,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "bullets",
+      "storage": "bullets",
+      "retrieval": "bullets",
+      "response": "bullets"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        0
+      ],
+      [
+        1,
+        "bullets",
+        1
+      ]
+    ],
+    "first_observed_divergence": "none_observed",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "bullets",
+          "retrieval": "bullets",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=bullets\nretrieval=bullets\nresponse=bullets",
+        "trace_diagnosis": "none_observed",
+        "log_diagnosis": "none_observed"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "bullets",
+          "retrieval": "bullets",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=bullets\nretrieval=bullets\nresponse=bullets",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "bullets",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=bullets\nresponse=bullets",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "bullets"
+        },
+        "ordinary_log": "response=bullets",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-00010",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": false,
+      "retrieval_fault": false,
+      "response_fault": true,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "bullets",
+      "storage": "bullets",
+      "retrieval": "bullets",
+      "response": "prose"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        0
+      ],
+      [
+        1,
+        "bullets",
+        1
+      ]
+    ],
+    "first_observed_divergence": "response",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "bullets",
+          "retrieval": "bullets",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=bullets\nretrieval=bullets\nresponse=prose",
+        "trace_diagnosis": "response",
+        "log_diagnosis": "response"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "bullets",
+          "retrieval": "bullets",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nretrieval=bullets\nresponse=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "bullets",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=bullets\nresponse=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "prose"
+        },
+        "ordinary_log": "response=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-00011",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": false,
+      "retrieval_fault": false,
+      "response_fault": true,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "bullets",
+      "storage": "bullets",
+      "retrieval": "bullets",
+      "response": "prose"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        0
+      ],
+      [
+        1,
+        "bullets",
+        1
+      ]
+    ],
+    "first_observed_divergence": "response",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "bullets",
+          "retrieval": "bullets",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=bullets\nretrieval=bullets\nresponse=prose",
+        "trace_diagnosis": "response",
+        "log_diagnosis": "response"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "bullets",
+          "retrieval": "bullets",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nretrieval=bullets\nresponse=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "bullets",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=bullets\nresponse=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "prose"
+        },
+        "ordinary_log": "response=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-00100",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": false,
+      "retrieval_fault": true,
+      "response_fault": false,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "bullets",
+      "storage": "bullets",
+      "retrieval": "prose",
+      "response": "prose"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        0
+      ],
+      [
+        1,
+        "bullets",
+        1
+      ]
+    ],
+    "first_observed_divergence": "retrieval",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "bullets",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=bullets\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "retrieval",
+        "log_diagnosis": "retrieval"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "bullets",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "bullets",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=bullets\nresponse=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "prose"
+        },
+        "ordinary_log": "response=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-00101",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": false,
+      "retrieval_fault": true,
+      "response_fault": false,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "bullets",
+      "storage": "bullets",
+      "retrieval": "bullets",
+      "response": "bullets"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        0
+      ],
+      [
+        1,
+        "bullets",
+        1
+      ]
+    ],
+    "first_observed_divergence": "none_observed",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "bullets",
+          "retrieval": "bullets",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=bullets\nretrieval=bullets\nresponse=bullets",
+        "trace_diagnosis": "none_observed",
+        "log_diagnosis": "none_observed"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "bullets",
+          "retrieval": "bullets",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=bullets\nretrieval=bullets\nresponse=bullets",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "bullets",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=bullets\nresponse=bullets",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "bullets"
+        },
+        "ordinary_log": "response=bullets",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-00110",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": false,
+      "retrieval_fault": true,
+      "response_fault": true,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "bullets",
+      "storage": "bullets",
+      "retrieval": "prose",
+      "response": "prose"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        0
+      ],
+      [
+        1,
+        "bullets",
+        1
+      ]
+    ],
+    "first_observed_divergence": "retrieval",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "bullets",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=bullets\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "retrieval",
+        "log_diagnosis": "retrieval"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "bullets",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "bullets",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=bullets\nresponse=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "prose"
+        },
+        "ordinary_log": "response=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-00111",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": false,
+      "retrieval_fault": true,
+      "response_fault": true,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "bullets",
+      "storage": "bullets",
+      "retrieval": "bullets",
+      "response": "prose"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        0
+      ],
+      [
+        1,
+        "bullets",
+        1
+      ]
+    ],
+    "first_observed_divergence": "response",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "bullets",
+          "retrieval": "bullets",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=bullets\nretrieval=bullets\nresponse=prose",
+        "trace_diagnosis": "response",
+        "log_diagnosis": "response"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "bullets",
+          "retrieval": "bullets",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nretrieval=bullets\nresponse=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "bullets",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=bullets\nresponse=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "prose"
+        },
+        "ordinary_log": "response=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-01000",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": true,
+      "retrieval_fault": false,
+      "response_fault": false,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "bullets",
+      "storage": "prose",
+      "retrieval": "prose",
+      "response": "prose"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "storage",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "prose",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=prose\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "bullets",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=prose\nresponse=prose",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "prose"
+        },
+        "ordinary_log": "response=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-01001",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": true,
+      "retrieval_fault": false,
+      "response_fault": false,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "bullets",
+      "storage": "prose",
+      "retrieval": "bullets",
+      "response": "bullets"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "storage",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "prose",
+          "retrieval": "bullets",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=prose\nretrieval=bullets\nresponse=bullets",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "bullets",
+          "retrieval": "bullets",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=bullets\nretrieval=bullets\nresponse=bullets",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "prose",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=prose\nresponse=bullets",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "bullets"
+        },
+        "ordinary_log": "response=bullets",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-01010",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": true,
+      "retrieval_fault": false,
+      "response_fault": true,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "bullets",
+      "storage": "prose",
+      "retrieval": "prose",
+      "response": "prose"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "storage",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "prose",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=prose\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "bullets",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=prose\nresponse=prose",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "prose"
+        },
+        "ordinary_log": "response=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-01011",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": true,
+      "retrieval_fault": false,
+      "response_fault": true,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "bullets",
+      "storage": "prose",
+      "retrieval": "bullets",
+      "response": "prose"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "storage",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "prose",
+          "retrieval": "bullets",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=prose\nretrieval=bullets\nresponse=prose",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "bullets",
+          "retrieval": "bullets",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nretrieval=bullets\nresponse=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=prose\nresponse=prose",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "prose"
+        },
+        "ordinary_log": "response=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-01100",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": true,
+      "retrieval_fault": true,
+      "response_fault": false,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "bullets",
+      "storage": "prose",
+      "retrieval": "prose",
+      "response": "prose"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "storage",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "prose",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=prose\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "bullets",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=prose\nresponse=prose",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "prose"
+        },
+        "ordinary_log": "response=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-01101",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": true,
+      "retrieval_fault": true,
+      "response_fault": false,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "bullets",
+      "storage": "prose",
+      "retrieval": "bullets",
+      "response": "bullets"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "storage",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "prose",
+          "retrieval": "bullets",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=prose\nretrieval=bullets\nresponse=bullets",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "bullets",
+          "retrieval": "bullets",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=bullets\nretrieval=bullets\nresponse=bullets",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "prose",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=prose\nresponse=bullets",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "bullets"
+        },
+        "ordinary_log": "response=bullets",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-01110",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": true,
+      "retrieval_fault": true,
+      "response_fault": true,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "bullets",
+      "storage": "prose",
+      "retrieval": "prose",
+      "response": "prose"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "storage",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "prose",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=prose\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "bullets",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=prose\nresponse=prose",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "prose"
+        },
+        "ordinary_log": "response=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-01111",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": false,
+      "storage_fault": true,
+      "retrieval_fault": true,
+      "response_fault": true,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "bullets",
+      "storage": "prose",
+      "retrieval": "bullets",
+      "response": "prose"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "storage",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "prose",
+          "retrieval": "bullets",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=prose\nretrieval=bullets\nresponse=prose",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "bullets",
+          "retrieval": "bullets",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nretrieval=bullets\nresponse=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "bullets",
+          "storage": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=bullets\nstorage=prose\nresponse=prose",
+        "trace_diagnosis": "storage",
+        "log_diagnosis": "storage"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "prose"
+        },
+        "ordinary_log": "response=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-10000",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": false,
+      "retrieval_fault": false,
+      "response_fault": false,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "prose",
+      "storage": "prose",
+      "retrieval": "prose",
+      "response": "prose"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        0
+      ],
+      [
+        1,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "prose",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "prose"
+        },
+        "ordinary_log": "response=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-10001",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": false,
+      "retrieval_fault": false,
+      "response_fault": false,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "prose",
+      "storage": "prose",
+      "retrieval": "bullets",
+      "response": "bullets"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        0
+      ],
+      [
+        1,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "retrieval": "bullets",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nretrieval=bullets\nresponse=bullets",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "prose",
+          "retrieval": "bullets",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=prose\nretrieval=bullets\nresponse=bullets",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nresponse=bullets",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "bullets"
+        },
+        "ordinary_log": "response=bullets",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-10010",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": false,
+      "retrieval_fault": false,
+      "response_fault": true,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "prose",
+      "storage": "prose",
+      "retrieval": "prose",
+      "response": "prose"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        0
+      ],
+      [
+        1,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "prose",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "prose"
+        },
+        "ordinary_log": "response=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-10011",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": false,
+      "retrieval_fault": false,
+      "response_fault": true,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "prose",
+      "storage": "prose",
+      "retrieval": "bullets",
+      "response": "prose"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        0
+      ],
+      [
+        1,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "retrieval": "bullets",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nretrieval=bullets\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "prose",
+          "retrieval": "bullets",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nretrieval=bullets\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "prose"
+        },
+        "ordinary_log": "response=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-10100",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": false,
+      "retrieval_fault": true,
+      "response_fault": false,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "prose",
+      "storage": "prose",
+      "retrieval": "prose",
+      "response": "prose"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        0
+      ],
+      [
+        1,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "prose",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "prose"
+        },
+        "ordinary_log": "response=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-10101",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": false,
+      "retrieval_fault": true,
+      "response_fault": false,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "prose",
+      "storage": "prose",
+      "retrieval": "bullets",
+      "response": "bullets"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        0
+      ],
+      [
+        1,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "retrieval": "bullets",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nretrieval=bullets\nresponse=bullets",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "prose",
+          "retrieval": "bullets",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=prose\nretrieval=bullets\nresponse=bullets",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nresponse=bullets",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "bullets"
+        },
+        "ordinary_log": "response=bullets",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-10110",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": false,
+      "retrieval_fault": true,
+      "response_fault": true,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "prose",
+      "storage": "prose",
+      "retrieval": "prose",
+      "response": "prose"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        0
+      ],
+      [
+        1,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "prose",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "prose"
+        },
+        "ordinary_log": "response=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-10111",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": false,
+      "retrieval_fault": true,
+      "response_fault": true,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "prose",
+      "storage": "prose",
+      "retrieval": "bullets",
+      "response": "prose"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        0
+      ],
+      [
+        1,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "retrieval": "bullets",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nretrieval=bullets\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "prose",
+          "retrieval": "bullets",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nretrieval=bullets\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "prose"
+        },
+        "ordinary_log": "response=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-11000",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": true,
+      "retrieval_fault": false,
+      "response_fault": false,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "prose",
+      "storage": "prose",
+      "retrieval": "prose",
+      "response": "prose"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "prose",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "prose"
+        },
+        "ordinary_log": "response=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-11001",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": true,
+      "retrieval_fault": false,
+      "response_fault": false,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "prose",
+      "storage": "prose",
+      "retrieval": "bullets",
+      "response": "bullets"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "retrieval": "bullets",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nretrieval=bullets\nresponse=bullets",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "prose",
+          "retrieval": "bullets",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=prose\nretrieval=bullets\nresponse=bullets",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nresponse=bullets",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "bullets"
+        },
+        "ordinary_log": "response=bullets",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-11010",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": true,
+      "retrieval_fault": false,
+      "response_fault": true,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "prose",
+      "storage": "prose",
+      "retrieval": "prose",
+      "response": "prose"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "prose",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "prose"
+        },
+        "ordinary_log": "response=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-11011",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": true,
+      "retrieval_fault": false,
+      "response_fault": true,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "prose",
+      "storage": "prose",
+      "retrieval": "bullets",
+      "response": "prose"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "retrieval": "bullets",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nretrieval=bullets\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "prose",
+          "retrieval": "bullets",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nretrieval=bullets\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "prose"
+        },
+        "ordinary_log": "response=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-11100",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": true,
+      "retrieval_fault": true,
+      "response_fault": false,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "prose",
+      "storage": "prose",
+      "retrieval": "prose",
+      "response": "prose"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "prose",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "prose"
+        },
+        "ordinary_log": "response=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-11101",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": true,
+      "retrieval_fault": true,
+      "response_fault": false,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "prose",
+      "storage": "prose",
+      "retrieval": "bullets",
+      "response": "bullets"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "retrieval": "bullets",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nretrieval=bullets\nresponse=bullets",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "prose",
+          "retrieval": "bullets",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=prose\nretrieval=bullets\nresponse=bullets",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "response": "bullets"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nresponse=bullets",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "bullets"
+        },
+        "ordinary_log": "response=bullets",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-11110",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": true,
+      "retrieval_fault": true,
+      "response_fault": true,
+      "retrieval_recovery": false
+    },
+    "trace": {
+      "acquisition": "prose",
+      "storage": "prose",
+      "retrieval": "prose",
+      "response": "prose"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "prose",
+          "retrieval": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nretrieval=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "prose"
+        },
+        "ordinary_log": "response=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  },
+  {
+    "id": "format-11111",
+    "old": "prose",
+    "expected": "bullets",
+    "switches": {
+      "acquisition_fault": true,
+      "storage_fault": true,
+      "retrieval_fault": true,
+      "response_fault": true,
+      "retrieval_recovery": true
+    },
+    "trace": {
+      "acquisition": "prose",
+      "storage": "prose",
+      "retrieval": "bullets",
+      "response": "prose"
+    },
+    "reopened_database_rows": [
+      [
+        0,
+        "prose",
+        1
+      ]
+    ],
+    "first_observed_divergence": "acquisition",
+    "observations": {
+      "full": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "retrieval": "bullets",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nretrieval=bullets\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_storage": {
+        "structured": {
+          "acquisition": "prose",
+          "retrieval": "bullets",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nretrieval=bullets\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "no_retrieval": {
+        "structured": {
+          "acquisition": "prose",
+          "storage": "prose",
+          "response": "prose"
+        },
+        "ordinary_log": "acquisition=prose\nstorage=prose\nresponse=prose",
+        "trace_diagnosis": "acquisition",
+        "log_diagnosis": "acquisition"
+      },
+      "answer_only": {
+        "structured": {
+          "response": "prose"
+        },
+        "ordinary_log": "response=prose",
+        "trace_diagnosis": "indeterminate",
+        "log_diagnosis": "indeterminate"
+      }
+    }
+  }
+]

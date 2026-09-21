@@ -1,0 +1,9 @@
+{
+  "request_sha256": "6cfbd3dfa7cb67c21e1b0bc923697d1c4ebfe57265dafdac8938d7d476291144",
+  "memory_sha256": "906586e2d1c8e39258222a1519a2a8ef3897b643083791494dccbba4ef28cd1d",
+  "calls": 6,
+  "reservation_usd": 0.12,
+  "scope": "One fictional export, fresh independent requests, natural language answers; restored versus empty context.",
+  "scoring": "Manual inspection against frozen criteria; no independent or blinded evaluator. No retries.",
+  "limits": "This does not establish global deletion, live Evo function, or general reliability."
+}

@@ -1,0 +1,70 @@
+{
+  "id": "format-04",
+  "trace": {
+    "expected": "bullets",
+    "accepted_gate_output": [
+      "bullets"
+    ],
+    "storage": [
+      "prose"
+    ],
+    "retrieval": [
+      "prose"
+    ]
+  },
+  "gate_status": {
+    "accepted": true,
+    "reason": "authorized_exact_revision"
+  },
+  "gate_rows": [
+    {
+      "id": "original",
+      "user_id": 7,
+      "memory_type": "preference",
+      "title": "format",
+      "memory_key": "format",
+      "detail": "prose",
+      "active": false,
+      "superseded_by": "453759e0-eed3-4bda-9b77-151d96159098"
+    },
+    {
+      "user_id": 7,
+      "memory_type": "preference",
+      "title": "format",
+      "memory_key": "format",
+      "detail": "bullets",
+      "id": "453759e0-eed3-4bda-9b77-151d96159098",
+      "active": true,
+      "supersedes": "original",
+      "revision_evidence": "e1"
+    }
+  ],
+  "reopened_rows": [
+    {
+      "id": "original",
+      "user_id": 7,
+      "memory_type": "preference",
+      "title": "format",
+      "memory_key": "format",
+      "detail": "prose",
+      "active": true
+    }
+  ],
+  "selected_rows": [
+    {
+      "id": "original",
+      "user_id": 7,
+      "memory_type": "preference",
+      "title": "format",
+      "memory_key": "format",
+      "detail": "prose",
+      "active": true
+    }
+  ],
+  "diagnosis": "storage",
+  "injected_condition": "skip_commit",
+  "expected_diagnosis": "storage",
+  "diagnosis_matches": true,
+  "retrieval_correct": false,
+  "model_response": "not_tested"
+}

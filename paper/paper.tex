@@ -1,0 +1,215 @@
+\documentclass[runningheads]{llncs}
+\usepackage[T1]{fontenc}
+\usepackage{newtxtext}
+\usepackage[varvw]{newtxmath}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+\begin{document}
+\title{Tracing Corrections Through AI Companion Memory}
+\subtitle{A Practical Evaluation Protocol and Exploratory Case Study}
+\titlerunning{Tracing Corrections Through AI Companion Memory}
+\author{Troy Ochowicz}
+\authorrunning{T. Ochowicz}
+\institute{Independent Researcher, Oshkosh, Wisconsin, USA\\\email{troyoch80@gmail.com}\\Author's research page: \url{https://troymaya.com/research/}}
+\maketitle
+\begin{abstract}
+An AI companion can acknowledge a correction yet answer from obsolete information later. This paper presents a practical protocol and early reusable checker for examining whether a correction survives saving, fresh conversations, restart, and summary refresh. The protocol records acquisition, durable storage, effective retrieval, and response evidence, and reports missing checkpoints rather than assuming success. Six local executable fixtures distinguish skipped saving from obsolete retrieval. A further 64-execution synthetic comparison includes simultaneous faults and recovery: twelve executions return the corrected final answer despite an earlier divergence. Equivalent ordinary logs yield identical diagnoses, so no advantage over equally informative logging is claimed. A twelve-request context diagnostic illustrates how an older summary can determine the answer when a corrected record is withheld. The checker exposes a local adapter interface and produces inspectable event records and reports; its demonstrations use deterministic synthetic components, not a complete assistant. These development examples establish the behavior of the tested checks, not deployment reliability, human debugging benefit, or independent validation. The contribution is a practical testing procedure with an open-source developer prototype and controlled synthetic demonstrations, with bounded diagnoses and documented integration requirements.
+\keywords{AI companion memory \and Correction persistence \and Evaluation protocol \and Provenance \and User agency}
+\end{abstract}
+
+\section{Introduction}
+Persistent memory can make an assistant useful across conversations, but persistence also creates a practical question: when a person corrects stored information, which parts of the system change? A record can be updated while a summary retains its earlier meaning. The updated record can survive in storage yet fail to reach the next response. A response can then be faithful to an obsolete context while being incorrect relative to the person's latest instruction. These are different failures with different remedies.
+
+For companion systems, the question concerns user agency as well as answer quality. A person should be able to distinguish an acknowledged correction from a correction that actually changes future behavior. A system that says it has updated a preference but continues using an old summary provides weak evidence of effective control. Conversely, an assistant that follows a legitimate new request should not be penalized merely because that request differs from a stored preference. Evaluation needs to preserve these distinctions.
+
+This paper asks: \emph{How can a small evaluation identify where a correction stops being available, across later conversations, without treating missing evidence as success?} The proposed procedure instruments the path from an authorized correction to a later response. It uses paired interventions on observable memory inputs and keeps missing telemetry explicit. Its output is a trace and a bounded diagnosis, rather than a single score described as ``memory.''
+
+The paper contributes (1) an operational protocol for recording correction transitions and source availability; (2) executable illustrations of indistinguishable final outputs, recovery, and missing-evidence abstention; and (3) an early adapter-based checker with documented evidence requirements and local demonstration runs. The aim is a usable method for small projects, not a new state-of-the-art memory architecture or a validated general benchmark. Stage decomposition and fault attribution have substantial prior art. The proposed emphasis is their application to correction accountability and user-controlled continuity in a companion prototype.
+
+\section{Related Work and Scope}
+This study grew out of discussion of Jovanovic's Corrective Continuity Hypothesis~\cite{jovanovic}. His framework distinguishes remembered continuity from the durable behavioral consequences of warranted correction through grounding, persistence, transfer, traceability, and revisability. Our persistence and provenance checks address a narrow part of that framework, not a test of the full hypothesis: retaining a correction need not change later behavior, and corrected states must remain revisable when better evidence appears. Transfer to varied contexts and subsequent evidence-driven revision remain untested here.
+
+LoCoMo evaluates long conversational memory through question answering, event summarization, and multimodal dialogue~\cite{locomo}. LongMemEval tests knowledge updates and abstention and separates indexing, retrieval, and reading~\cite{longmemeval}. We run neither benchmark and claim no novelty in testing corrections or separating stages. Our implementation-facing records complement broader benchmarks.
+
+Rajan et al. study layerwise omission using injected faults~\cite{omission}; Yu et al. use provenance to repair faulty memory and downstream computation~\cite{rollback}; TANGLE examines personal-memory conflicts without one definitive answer~\cite{tangle}. These preprints constrain novelty claims; we do not compare against their systems. Our narrower emphasis is distinguishing what should be known, what was supplied, and what a response claims about history.
+
+The case study concerns selected local components associated with Evo, a companion prototype developed in the TroyMaya project. The original context function was transcribed from inspected PHP source; database and metadata dependencies were replaced by synthetic adapters. A separately written candidate correction gate and SQLite test adapter were also used. Neither component constitutes a complete copy of the deployed companion. Natural-language acquisition, the full conversational prompt, developmental processing, and production database behavior were not reproduced. All experimental personal information was fictional.
+
+\section{Correction Tracing Protocol}
+\subsection{Define the Correction and Its Authority}
+Start with a target proposition, an earlier value, a revised value, and an authority rule. A person's explicit change to their own preference is different from an unsupported change to an external fact. The evaluator must record what makes a proposed revision admissible. In the present implementation, trusted evidence is supplied by the test harness. This tests the gate's response to that evidence, not real authentication or semantic truth.
+
+Record whether the change is a durable revision, a temporary exception, or an unresolved contradiction. For example, ``I generally prefer mountains'' followed by ``pick a beach for this trip'' need not change the general preference. A historical query asks what used to hold; a current query asks what should guide action now. The protocol requires separate expected behavior for each. Original history cannot be assumed available merely because a current value is stored.
+
+\subsection{Observe Four Boundaries and a Control Operation}
+For each correction event, preserve the authorized input and observable outputs at four boundaries (Table~\ref{tab:stages}). Record raw representations and identifiers rather than only evaluator summaries. Each observation should identify the user or synthetic namespace, source, version, time, and intervention where available. A missing field remains missing; it must not be reconstructed as observed evidence after the result is known.
+
+\begin{table}[t]
+\caption{Evidence required for stage-level reporting. Not every stage is implemented in this case study.}\label{tab:stages}
+\small
+\begin{tabular}{p{2.1cm}p{5.5cm}p{3.8cm}}
+\toprule
+Boundary & Observable evidence & Question \\
+\midrule
+Acquisition & Parsed or accepted correction and its source & Was the intended change captured? \\
+Storage & Reopened state, active versions and prior versions & Was the accepted change durably retained? \\
+Retrieval & Selected records and complete supplied context & Did the relevant information reach inference? \\
+Response & Exact output, request settings and uncertainty & Was available evidence used appropriately? \\
+User control & Export selection, restored state and exclusions & What traveled, and what remained outside scope? \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+User control is a cross-cutting operation rather than a fifth inference stage. An export can correctly omit a private note even when older backups still contain it. The evaluator must state the deletion or exclusion boundary: active context, current export, local source, or all managed replicas. The experiments here support only selected export and local restoration. They do not establish erasure from every copy or from a model's weights.
+
+\subsection{Freeze Inputs and Isolate Interventions}
+Before execution, save the cases, questions, condition definitions, scoring rules, and stopping rule. Local hashes provide an integrity record; they do not independently timestamp a preregistration. Earlier exploratory findings must be disclosed when they informed the next protocol. Development examples must not later be described as held-out validation.
+
+Begin each probe from the same appropriate checkpoint. Record interventions as explicit state or input differences. If a summary and structured store both contain a proposition, removing only one need not remove the information. If retrieval is the mechanism that reads the structured store, ``retrieval disabled'' and ``structured memory disabled'' may not be independent conditions. Mark unsupported or confounded conditions rather than assigning them distinct labels without corresponding implementation differences.
+
+Use a clean condition with no target information, and preserve the actual context presented to inference. Questions themselves may reveal an old date or a preference; this is part of the evidence available to the model, not hidden ground truth. A no-memory answer should be assessed for appropriate uncertainty, while a question that introduces new information may support a limited response based on that information alone.
+
+\subsection{Diagnose Observable Divergence}
+For an exact-value fixture with one intended current value $v^*$, let $a$, $s$, and $r$ denote the accepted value, active value read from durable storage, and retrieved value. The illustrative diagnostic reports the earliest observed mismatch:
+\[
+D = \min\{j : x_j \ne v^*\}, \qquad (x_1,x_2,x_3)=(a,s,r).
+\]
+If an observation needed to locate the boundary is missing or ambiguous, the result is indeterminate. If all observed values match, report no observed divergence over those stages. Do not label an unmeasured response stage healthy. This rule is intentionally simple and applies to the controlled singleton values in the development fixtures.
+
+In richer systems, comparing strings is insufficient. Multiple valid representations, unresolved conflicts, superseded records, and later recovery can violate the singleton assumption. A proposed diagnosis should then name the missing information or report multiple candidate boundaries. Earliest divergence is not necessarily the software root cause: a legitimate filtering policy, an authorization rejection, or an incorrect evaluator expectation can also create a mismatch. State traces localize observable differences; causal explanations require justified interventions and an accurate authority model.
+
+\subsection{Separate Response Measures}
+Three questions should be scored independently. First, does the response match the latest authorized state known to the evaluator? Second, is it grounded in the evidence actually supplied to the model? Third, does it accurately describe whether information is current, historical, inferred, or unavailable? A Friday answer can be locally grounded in an old summary while failing the first criterion. A Friday historical answer can match the external fixture while overstating what its context establishes.
+
+For decisions, record both action and rationale. A choice matching a preference by chance is not evidence that the preference caused the action. For new instructions, record recognition of the instruction separately from recall of the prior state. Refusing an authorized change merely to preserve an old preference is not successful memory. Errors, incomplete outputs, and missing trials must remain separate from substantive incorrect answers.
+
+\section{Reusable Checker and Integration Boundary}
+The early Correction Checker exposes a local JSON adapter interface with six operations: capabilities, teach, correct, probe, restart, and refresh summary. A run first teaches a fictional Friday schedule and probes a baseline conversation, then supplies a Tuesday correction. It probes the learning conversation, a fresh conversation, a conversation after restart, and one after summary refresh. Probe requests contain neither candidate day nor an expected answer. Later checkpoints include preceding interventions; this sequence is not an isolated causal ablation.
+
+Adapters report captured correction values, reopened durable state, effective retrieval context, and actual responses, with sources and raw evidence where available. Single durable-correction cases are configurable. Exact-value assessment is supported; temporary-exception rules, repeated-correction histories, and independent semantic grading are not. Conflicting or inaccessible evidence must be marked unavailable. A new connector process is launched for each operation, but this does not verify a remote backend restart. Session isolation and lifecycle operations remain explicit adapter responsibilities. Unsupported transitions are reported rather than simulated as completed. An unavailable operation invalidates any attached observation values. Reports distinguish connector-only claims from attached inspectable evidence; evidence presence is not independent verification.
+
+Each run saves a plan, events, assessments, and a report. Execution status is separate from passed, failed, or inconclusive outcomes and corresponding exit codes; missing raw evidence prevents an overall pass. Four deterministic demonstration modes cover successful persistence, deliberately skipped saving, stale-summary retrieval, and withheld storage telemetry. In the skipped-save demonstration the learning-conversation answer passes while later conversation answers fail. These are engineering checks of the tool, not natural failures discovered in Evo or evidence of usability. The included SQLite assistant is synthetic; connecting a complete assistant remains future work. The checker uses standard-library Python and its new code has an MIT reuse license. Adapter output must be reviewed for private data before sharing.
+
+\section{Exploratory Case Study}
+\subsection{Executable Storage and Retrieval Faults}
+Two exact-value corrections were used: Friday to Tuesday for a fictional schedule, and prose to bullets for a presentation preference. Each was run under healthy operation, a skipped correction commit, and obsolete-record retrieval, yielding six executions. The schedule is represented as a user-controlled preference in this gate fixture; it is not an independently verified external fact.
+
+Each execution initialized an SQLite table with an active original record. The existing candidate gate accepted a scripted authorized correction, archived the old record in its returned state, and added the replacement. Under normal operation the adapter committed this record list. The commit fault suppressed that update, leaving the original database intact. The database connection was then closed and independently reopened. The retrieval fault selected the oldest row rather than the active row. Actual gate output, reopened rows, and selected rows were logged.
+
+The diagnostic function received only these stage values and the expected current value, not the condition label. The experiment developer knew the faults and authored the cases. This is a transparent executable development check, not a blind challenge. No language model participated in these six executions. The acquisition observation refers to accepted gate output, not automated understanding of a conversation. The record-list adapter is also not the separate full-state persistence implementation used in the export work.
+
+\subsection{Original Context Function and Behavioral Probes}
+The transcribed Evo function combines relationship and last-session summaries, themes, and selected memory records. Its global memory gate suppresses the whole section. Selected records are ranked using importance, recency, active status, and lexical query matches, followed by similarity filtering. The dependency adapter supplies fixture records; it does not establish production retrieval or vector search behavior.
+
+For this diagnostic, a summary states that fictional project reports are sent Friday, while a structured record states that they are \emph{now} sent Tuesday. This state was deliberately planted. It is not evidence that Evo's normal acquisition creates it. Five offline conditions produced the expected contexts: both sources, summary removed, records withheld, neither source, and global memory disabled. The last two returned empty context; the disabled gate also avoided the fetch helper. Only four distinct contexts were taken forward.
+
+Each context received three independent questions: the current report day, the originally scheduled day, and what to do with an old note saying Friday. The twelve requests used the recorded model identifier \texttt{gpt-5.6-luna}, reasoning effort \texttt{none}, a 512-token output limit, \texttt{store=false}, no tools, no prior-response link, and no automatic retries. Sampling defaults were left to the service and are retained in the raw response records. Request order was shuffled with a fixed seed. There was one response per context--question cell, not repeated independent acquisition.
+
+The common instruction requested brief answers grounded in the supplied memory, acknowledgment of missing or conflicting information, and a distinction between facts and inference. The prompts and condition-specific interpretation criteria were saved before execution. Assessment was performed with AI assistance by inspecting the outputs against those criteria, without independent blinded scoring. The source context and all request bodies are retained so that this interpretation can be challenged.
+
+\section{Results}
+\subsection{Identical Incorrect Retrievals Had Different Traces}
+All six executable diagnoses matched their injected conditions (Table~\ref{tab:faults}). Healthy runs retained and retrieved the new value. Skipped commits left the old value in both storage and retrieval. Oldest-row selection left the new value correctly active in storage but retrieved the obsolete record. A retrieval-correctness check alone marked four executions incorrect and two correct, without identifying which of the two mechanisms produced each old value.
+
+\begin{table}[t]
+\caption{Executable fault results. Each row represents two development runs, not a population sample.}\label{tab:faults}
+\small
+\begin{tabular}{p{3.0cm}cccc}
+\toprule
+Condition & Accepted & Stored & Retrieved & Diagnosis \\
+\midrule
+Healthy & New & New & New & None observed \\
+Commit suppressed & New & Old & Old & Storage \\
+Oldest row selected & New & New & Old & Retrieval \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+This demonstrates the intended behavior of a simple instrument under controlled conditions. Reporting ``100\% diagnostic accuracy'' without the fixture qualification would be misleading: the diagnostic and the small set of single-fault cases were designed together. The result does not measure naturally occurring Evo faults, root-cause accuracy in arbitrary systems, or response-generation reliability.
+
+\subsection{Recovery, Missing Evidence, and Equivalent Logs}
+A subsequent development experiment used a new synthetic SQLite adapter, not Evo. Two old/new pairs were executed under all 32 combinations of five binary switches: retain the old acquisition value, skip saving, retrieve the oldest record, emit the old response, and recover retrieval directly from the authorized correction. Recovery overrides oldest-record selection. Storage was read after closing and reopening the connection. Responses were deterministic stubs; no model requests were made. The 64 executions are a factorial enumeration, not independent statistical samples. The protocol was saved locally before execution, but cases and diagnostic were jointly authored, without external preregistration or held-out validation.
+
+The diagnostic scans acquisition, storage, retrieval, and response in order. A mismatch before any missing observation identifies the earliest observed divergence; a preceding gap yields an indeterminate result. Complete matching observations yield no observed divergence. This conservative rule does not infer across gaps from assumptions about the fault family. Ground truth is the first mismatch in the full executed trace, not the identity of every injected software fault.
+
+\begin{table}[t]
+\caption{Synthetic observability comparison (64 executions per observation policy). Ordinary stage=value logs and structured records agree in every case when given identical evidence.}\label{tab:observability}
+\small
+\begin{tabular}{p{4.5cm}rrr}
+\toprule
+Observed checkpoints & Correct definite & Indeterminate & Wrong definite \\
+\midrule
+All four & 64 & 0 & 0 \\
+Storage omitted & 32 & 32 & 0 \\
+Retrieval omitted & 48 & 16 & 0 \\
+Response only & 0 & 64 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Table~\ref{tab:observability} reports all observation policies. Ordinary logs were simple stage=value lines parsed into the same values and evaluated with the same rule. Their exact agreement is expected: this tests representation parity, not a competitive debugging baseline. It provides no evidence that structured correction traces outperform equally informative logs.
+
+Twelve executions returned the corrected final value despite an earlier divergence. For example, acquisition accepts Tuesday, saving leaves Friday, recovery supplies Tuesday directly, and the response returns Tuesday. Answer correctness conceals the stale durable state. Grouping identical visible old/new patterns retrospectively shows that both possible final-answer patterns correspond to multiple earliest-divergence labels. Missing storage produces three ambiguous visible patterns, and missing retrieval produces one. These groups are a bounded identifiability analysis using complete labels, not a deployable diagnostic. The conservative rule can abstain even when the enumerated fault family would permit a narrower inference. Complete-trace success is straightforward by construction and does not establish production diagnostic accuracy.
+
+\subsection{An Obsolete Summary Determined the Available Answer}
+Table~\ref{tab:context} presents all twelve responses in compact form. Current-day questions returned Tuesday with the corrected record, Friday with the summary alone, and uncertainty with neither source. The old-note probe followed the same pattern when a schedule was available. With no memory, the model asked what the note referred to rather than assuming it described the report schedule.
+
+\begin{table}[t]
+\caption{Single-draw response observations across the four supplied contexts. Historical assertions are not automatically provenance-correct.}\label{tab:context}
+\small
+\begin{tabular}{p{2.5cm}p{1.5cm}p{2.6cm}p{4.0cm}}
+\toprule
+Context & Current day & Original day & Old Friday note \\
+\midrule
+Both sources & Tuesday & Friday, definite & Keep Tuesday unless reinstated \\
+Record only & Tuesday & Unspecified & Keep Tuesday \\
+Summary only & Friday & Friday, definite & Keep Friday absent newer evidence \\
+Neither & Unspecified & Unknown & Verify what the note means \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The intact combined context did not cause an incorrect current-day response in this draw. The phrase ``now sent Tuesday'' supplies a temporal cue. The result therefore does not establish that every contradiction confuses the model. Instead, it documents the consequence of withholding the correction while retaining another source: the response can be grounded in the remaining context yet obsolete relative to the evaluator's current state.
+
+Historical questions produced definite Friday answers with either summary-containing context. This agrees with the planted history, but the summary did not explicitly establish an original date. The inference is plausible and was not independently adjudicated; it is retained as a supporting provenance observation, not a primary error claim.
+
+The requests consumed 1,107 input and 248 output tokens. These counts describe this batch only. They are not a measure of the total development effort or a claim that a complete memory evaluation has comparable cost. No automatic retries or omitted failed responses occurred in this twelve-request batch.
+
+\section{Implications for Companion Evaluation}
+The worked examples motivate a correction receipt that reports more than conversational acknowledgment. A useful receipt could identify the accepted revision, the stored current version, which dependent summaries were invalidated or retained, and which later contexts included it. Such a receipt would allow a user or maintainer to ask a specific question when behavior remains obsolete. This is a design proposal; the study does not measure whether users understand or benefit from it.
+
+Historical preservation and privacy require explicit choices. Keeping old information can support audit and answer historical questions, but it may conflict with an exclusion request. An implementation can separate a user-accessible audit archive from the information available to inference. That separation must be tested: the existence of an archive does not imply it is hidden from retrieval, and hiding it from retrieval does not imply deletion. A supporting export demonstration in the evidence package illustrates only selected-record transfer; older copies remain outside its claim.
+
+For companion continuity, portability should be described as the transfer of selected data and observable behavior, not as proof that identity or subjective experience has been preserved. A fresh session that answers from an imported record demonstrates use of that record. It does not establish continuity without an information channel. These distinctions let evaluation address practical control without making claims about consciousness or the legitimacy of personal relationships.
+
+The protocol also helps avoid a misleading interpretation of ablation results. A memory pathway can be successfully removed while the answer remains unchanged because another source carries the same information. Conversely, an answer can change because the intervention jointly removed several sources. Source inventories and effective-context capture are therefore prerequisites for interpreting an intervention as a single-path comparison. In this local implementation, transcript removal and independent retrieval-versus-store removal were unavailable; those missing conditions were not filled with simulated full-system scores.
+
+\section{Limitations and Validation Agenda}
+The study is small and exploratory. The executable examples use two simple exact-value corrections; the expanded comparison remains a synthetic binary-value adapter with deterministic responses. The behavioral study uses one schedule, one model identifier, one prompt family, and one draw per cell. These are illustrative executions, not independent users, long-running histories, or an estimate of deployment prevalence. No confidence interval or significance test is warranted. The literature review is targeted rather than systematic, and broad novelty in memory decomposition or failure attribution is not claimed.
+
+Several limits concern construct validity. Gate acceptance substitutes for natural-language acquisition in the fault fixture. Exact-value comparison does not recognize semantic paraphrases. The supplied-context study changes the amount of information across conditions, so it cannot isolate a representation advantage. Its instructions explicitly encourage uncertainty. The chronology judgments are interpretive and were not independently scored. The diagnostic assumes trustworthy logs and a correct expected value. The expanded comparison includes recovery and simultaneous injected faults but localizes only the earliest observed mismatch, not all underlying faults. Semantic alternatives and corrupted telemetry remain untested.
+
+Source fidelity is also limited. The PHP function is a transcription with substituted dependencies, not a validated production replica. The candidate gate is newly written code and is not attributed to original Evo. A complete companion includes prompts, queues, caches, settings, acquisition models, and stores not exercised here. No inference about the full system's overall reliability follows from these components.
+
+A stronger evaluation should freeze new cases before collection, inject realistic faults in at least two executable memory implementations, and extend the synthetic multi-fault, missing-log, and recovery conditions to realistic system behavior. It should assess whether a diagnostic appropriately abstains when two mechanisms are observationally indistinguishable. Human adjudication should examine both answer correctness and provenance claims, with agreement reported. Repeated model draws can characterize sampling variability, but they do not replace independent acquisition cases. User studies would be needed to evaluate comprehensibility and practical control; none were conducted here.
+
+\section{Conclusion}
+Correction evaluation benefits from separating an accepted change, durable storage, retrieved context, and the eventual response. In the executable development fixtures, two faults produced the same old retrieved value but were distinguished by reopened storage. In the local context study, withholding a corrected record exposed an obsolete summary as the remaining basis for the answer. The reusable checker makes the proposed sequence inspectable but has not yet been validated on a complete assistant. The expanded examples show how recovery can hide an earlier divergence and why missing evidence warrants abstention. Equivalent ordinary logs tie structured traces; the benefit illustrated is observation coverage, not a superior diagnostic algorithm. These examples motivate broader validation. They do not establish a new general benchmark, a complete Evo assessment, or a production failure rate.
+
+\subsubsection{Artifacts and Research Practice}
+The checker and documentation are available as \href{https://github.com/troyoch/correction-checker/releases/tag/v0.2.1}{GitHub release v0.2.1}, commit \texttt{d7bfe01}; its nine tests passed locally, verifying packaging, not independent replication. The software and research evidence are archived at \href{https://doi.org/10.5281/zenodo.22867840}{Zenodo (10.5281/zenodo.22867840)}. The included guide maps results to protocols, code, inputs, recorded outputs, and hashes, distinguishing free synthetic reruns from recorded-output inspection. No new model responses are needed for those checks. Original Evo source and the Springer class are excluded; saved context construction is not independently reproduced. Credentials and private conversations are excluded. Recorded outputs support the observations; regenerated responses may differ. The larger proposed CMAI evaluation was not executed. Exploratory demonstrations were selected for correction tracing, not pooled into a performance statistic.
+
+The work used OpenAI Codex extensively for protocol development, code generation, execution, literature search, drafting, and response interpretation. The experimental API outputs report \texttt{gpt-5.6-luna}; the coding-assistant model is not treated as an independently verified experimental variable. Interpretations were developed with AI assistance and have not received independent human adjudication. No independent human scoring or external replication is claimed. No human participants or real personal-memory datasets were used. The author's development of the Evo/TroyMaya prototype is a relevant project interest. Discussion with Vladisav Jovanovic of his Corrective Continuity Hypothesis~\cite{jovanovic} directly motivated this study; no endorsement or coauthorship is implied.
+
+\begin{thebibliography}{8}
+\bibitem{jovanovic} Jovanovic, V.: The Corrective Continuity Hypothesis: Perceived AI Consciousness, Persistent Memory, and Trace-Bearing Revision. SSRN preprint (2026). \doi{10.2139/ssrn.7326338}
+\bibitem{locomo} Maharana, A., Lee, D.H., Tulyakov, S., Bansal, M., Barbieri, F., Fang, Y.: Evaluating Very Long-Term Conversational Memory of LLM Agents. In: Proceedings of ACL, pp. 13851--13870 (2024). \doi{10.18653/v1/2024.acl-long.747}
+\bibitem{longmemeval} Wu, D., Wang, H., Yu, W., Zhang, Y., Chang, K.W., Yu, D.: LongMemEval: Benchmarking Chat Assistants on Long-Term Interactive Memory. ICLR (2025). \url{https://arxiv.org/abs/2410.10813}
+\bibitem{omission} Rajan, S., Mugel, S., Orus, R.: Where Facts Go Missing: A Layerwise Taxonomy and Per-Layer Attribution of Information Omission in Air-Gapped LLMAgent Pipelines. arXiv preprint (2026). \url{https://arxiv.org/abs/2607.22448}
+\bibitem{rollback} Yu, C., Wang, Y., Zhang, J., Duan, Y., Zheng, M., Wu, Z., Shi, K., Cai, T.: From Faulty Memories to Corrected Actions: Dependency-Guided Rollback Repair for Memory-Augmented Agents. arXiv preprint (2026). \url{https://arxiv.org/abs/2608.10502}
+\bibitem{tangle} Yang, L., Xu, S., Li, Z., Yang, T., Huang, L.: When Personal Memory Has No Single Answer: Evaluating LLM Agents under Irreducible Conflict. arXiv preprint (2026). \url{https://arxiv.org/abs/2608.13921}
+\end{thebibliography}
+\end{document}
+

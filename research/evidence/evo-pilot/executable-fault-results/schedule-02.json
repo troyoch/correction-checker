@@ -1,0 +1,83 @@
+{
+  "id": "schedule-02",
+  "trace": {
+    "expected": "Tuesday",
+    "accepted_gate_output": [
+      "Tuesday"
+    ],
+    "storage": [
+      "Tuesday"
+    ],
+    "retrieval": [
+      "Friday"
+    ]
+  },
+  "gate_status": {
+    "accepted": true,
+    "reason": "authorized_exact_revision"
+  },
+  "gate_rows": [
+    {
+      "id": "original",
+      "user_id": 7,
+      "memory_type": "preference",
+      "title": "schedule",
+      "memory_key": "schedule",
+      "detail": "Friday",
+      "active": false,
+      "superseded_by": "247a4ec2-1697-46e9-b426-013b7bde1431"
+    },
+    {
+      "user_id": 7,
+      "memory_type": "preference",
+      "title": "schedule",
+      "memory_key": "schedule",
+      "detail": "Tuesday",
+      "id": "247a4ec2-1697-46e9-b426-013b7bde1431",
+      "active": true,
+      "supersedes": "original",
+      "revision_evidence": "e1"
+    }
+  ],
+  "reopened_rows": [
+    {
+      "id": "original",
+      "user_id": 7,
+      "memory_type": "preference",
+      "title": "schedule",
+      "memory_key": "schedule",
+      "detail": "Friday",
+      "active": false,
+      "superseded_by": "247a4ec2-1697-46e9-b426-013b7bde1431"
+    },
+    {
+      "user_id": 7,
+      "memory_type": "preference",
+      "title": "schedule",
+      "memory_key": "schedule",
+      "detail": "Tuesday",
+      "id": "247a4ec2-1697-46e9-b426-013b7bde1431",
+      "active": true,
+      "supersedes": "original",
+      "revision_evidence": "e1"
+    }
+  ],
+  "selected_rows": [
+    {
+      "id": "original",
+      "user_id": 7,
+      "memory_type": "preference",
+      "title": "schedule",
+      "memory_key": "schedule",
+      "detail": "Friday",
+      "active": false,
+      "superseded_by": "247a4ec2-1697-46e9-b426-013b7bde1431"
+    }
+  ],
+  "diagnosis": "retrieval",
+  "injected_condition": "old_retrieval",
+  "expected_diagnosis": "retrieval",
+  "diagnosis_matches": true,
+  "retrieval_correct": false,
+  "model_response": "not_tested"
+}

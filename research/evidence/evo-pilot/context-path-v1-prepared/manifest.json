@@ -1,0 +1,31 @@
+{
+  "request_sha256": "7206c61be527dede32181c2da39008d13fd7aebb322957444ae24d24d9bf63bb",
+  "source_sha256": "ce0d5dd04f9e238359eb8db6c4c27f590c355d1c37b3a85f8ff377fea5c11d03",
+  "calls": 12,
+  "reservation_usd": 0.24,
+  "scope": "Separate local supplied-context diagnostic, not CMAI v0.2 full Evo execution. One scripted correction, one draw per cell.",
+  "scoring": "Manually report stated current day, stated original day, uncertainty, and unsupported chronology. Keep available-context groundedness separate from external Tuesday target. No independent judge or significance tests.",
+  "limits": "Original history is not explicitly preserved in these contexts. Different inputs contain different amounts of information. No live acquisition, repair comparison, or model replication.",
+  "keys": {
+    "both": {
+      "current": "Tuesday or explicit unresolved conflict; Friday alone is externally outdated.",
+      "historical": "Friday is a plausible inference but original chronology is not explicit; note uncertainty rather than claiming verified history.",
+      "conflict": "Use Tuesday as current or clarify the inconsistent sources; do not blindly reinstate Friday."
+    },
+    "no_summary": {
+      "current": "Tuesday.",
+      "historical": "Original day unknown; Tuesday is current, not established original.",
+      "conflict": "Keep current Tuesday; old note alone does not request a change."
+    },
+    "no_records": {
+      "current": "Friday is grounded in available text but externally outdated; record these dimensions separately.",
+      "historical": "Original chronology unknown; Friday is present but not explicitly original.",
+      "conflict": "Friday is supported by both available sources but external current truth is Tuesday; no Tuesday evidence supplied."
+    },
+    "neither": {
+      "current": "Unknown; ask for schedule.",
+      "historical": "Unknown; do not invent an original day.",
+      "conflict": "Friday is known only from user-provided old note; verify current schedule rather than asserting it remains current."
+    }
+  }
+}
