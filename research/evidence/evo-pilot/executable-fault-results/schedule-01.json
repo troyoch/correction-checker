@@ -1,0 +1,70 @@
+{
+  "id": "schedule-01",
+  "trace": {
+    "expected": "Tuesday",
+    "accepted_gate_output": [
+      "Tuesday"
+    ],
+    "storage": [
+      "Friday"
+    ],
+    "retrieval": [
+      "Friday"
+    ]
+  },
+  "gate_status": {
+    "accepted": true,
+    "reason": "authorized_exact_revision"
+  },
+  "gate_rows": [
+    {
+      "id": "original",
+      "user_id": 7,
+      "memory_type": "preference",
+      "title": "schedule",
+      "memory_key": "schedule",
+      "detail": "Friday",
+      "active": false,
+      "superseded_by": "ec03d9b1-68fb-4813-a403-0413ee751b1d"
+    },
+    {
+      "user_id": 7,
+      "memory_type": "preference",
+      "title": "schedule",
+      "memory_key": "schedule",
+      "detail": "Tuesday",
+      "id": "ec03d9b1-68fb-4813-a403-0413ee751b1d",
+      "active": true,
+      "supersedes": "original",
+      "revision_evidence": "e1"
+    }
+  ],
+  "reopened_rows": [
+    {
+      "id": "original",
+      "user_id": 7,
+      "memory_type": "preference",
+      "title": "schedule",
+      "memory_key": "schedule",
+      "detail": "Friday",
+      "active": true
+    }
+  ],
+  "selected_rows": [
+    {
+      "id": "original",
+      "user_id": 7,
+      "memory_type": "preference",
+      "title": "schedule",
+      "memory_key": "schedule",
+      "detail": "Friday",
+      "active": true
+    }
+  ],
+  "diagnosis": "storage",
+  "injected_condition": "skip_commit",
+  "expected_diagnosis": "storage",
+  "diagnosis_matches": true,
+  "retrieval_correct": false,
+  "model_response": "not_tested"
+}

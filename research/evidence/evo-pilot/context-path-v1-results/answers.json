@@ -1,0 +1,50 @@
+[
+  {
+    "id": "both-conflict",
+    "answer": "The current schedule says weekly reports are sent **Tuesday**. Treat the old Friday note as outdated, unless there’s evidence it was intentionally reinstated. Update or clarify the documentation to avoid confusion."
+  },
+  {
+    "id": "both-current",
+    "answer": "Tuesday."
+  },
+  {
+    "id": "both-historical",
+    "answer": "The reports were originally scheduled for **Friday**; they are now sent on **Tuesday**."
+  },
+  {
+    "id": "neither-conflict",
+    "answer": "The note only says “Friday,” so its meaning is unclear. We should verify what it refers to—such as a deadline, meeting, or appointment—before taking action."
+  },
+  {
+    "id": "neither-current",
+    "answer": "The memory does not specify a day for sending the weekly report."
+  },
+  {
+    "id": "neither-historical",
+    "answer": "I don’t have enough information to determine which day the reports were originally scheduled for."
+  },
+  {
+    "id": "no_records-conflict",
+    "answer": "The old note matches the current continuity: weekly reports are sent on Friday. Keep the Friday schedule unless newer information contradicts it."
+  },
+  {
+    "id": "no_records-current",
+    "answer": "Friday."
+  },
+  {
+    "id": "no_records-historical",
+    "answer": "The reports were originally scheduled for **Friday**."
+  },
+  {
+    "id": "no_summary-conflict",
+    "answer": "Use Tuesday as the current report schedule. The Friday note is outdated unless there’s evidence it was later reinstated."
+  },
+  {
+    "id": "no_summary-current",
+    "answer": "Tuesday."
+  },
+  {
+    "id": "no_summary-historical",
+    "answer": "The original report day isn’t specified in the available information."
+  }
+]

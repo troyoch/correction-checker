@@ -1,0 +1,125 @@
+{
+  "executions": 64,
+  "api_requests": 0,
+  "correct_final_answer_despite_prior_divergence": 12,
+  "policies": {
+    "full": {
+      "correct_definite": 64,
+      "indeterminate": 0,
+      "incorrect_definite": 0,
+      "ordinary_log_agreement": 64,
+      "observable_patterns": 9,
+      "patterns_with_multiple_possible_labels": 0,
+      "pattern_labels": {
+        "{\"acquisition\": true, \"response\": true, \"retrieval\": true, \"storage\": true}": [
+          "none_observed"
+        ],
+        "{\"acquisition\": true, \"response\": false, \"retrieval\": true, \"storage\": true}": [
+          "response"
+        ],
+        "{\"acquisition\": true, \"response\": false, \"retrieval\": false, \"storage\": true}": [
+          "retrieval"
+        ],
+        "{\"acquisition\": true, \"response\": false, \"retrieval\": false, \"storage\": false}": [
+          "storage"
+        ],
+        "{\"acquisition\": true, \"response\": true, \"retrieval\": true, \"storage\": false}": [
+          "storage"
+        ],
+        "{\"acquisition\": true, \"response\": false, \"retrieval\": true, \"storage\": false}": [
+          "storage"
+        ],
+        "{\"acquisition\": false, \"response\": false, \"retrieval\": false, \"storage\": false}": [
+          "acquisition"
+        ],
+        "{\"acquisition\": false, \"response\": true, \"retrieval\": true, \"storage\": false}": [
+          "acquisition"
+        ],
+        "{\"acquisition\": false, \"response\": false, \"retrieval\": true, \"storage\": false}": [
+          "acquisition"
+        ]
+      }
+    },
+    "no_storage": {
+      "correct_definite": 32,
+      "indeterminate": 32,
+      "incorrect_definite": 0,
+      "ordinary_log_agreement": 64,
+      "observable_patterns": 6,
+      "patterns_with_multiple_possible_labels": 3,
+      "pattern_labels": {
+        "{\"acquisition\": true, \"response\": true, \"retrieval\": true}": [
+          "none_observed",
+          "storage"
+        ],
+        "{\"acquisition\": true, \"response\": false, \"retrieval\": true}": [
+          "response",
+          "storage"
+        ],
+        "{\"acquisition\": true, \"response\": false, \"retrieval\": false}": [
+          "retrieval",
+          "storage"
+        ],
+        "{\"acquisition\": false, \"response\": false, \"retrieval\": false}": [
+          "acquisition"
+        ],
+        "{\"acquisition\": false, \"response\": true, \"retrieval\": true}": [
+          "acquisition"
+        ],
+        "{\"acquisition\": false, \"response\": false, \"retrieval\": true}": [
+          "acquisition"
+        ]
+      }
+    },
+    "no_retrieval": {
+      "correct_definite": 48,
+      "indeterminate": 16,
+      "incorrect_definite": 0,
+      "ordinary_log_agreement": 64,
+      "observable_patterns": 6,
+      "patterns_with_multiple_possible_labels": 1,
+      "pattern_labels": {
+        "{\"acquisition\": true, \"response\": true, \"storage\": true}": [
+          "none_observed"
+        ],
+        "{\"acquisition\": true, \"response\": false, \"storage\": true}": [
+          "response",
+          "retrieval"
+        ],
+        "{\"acquisition\": true, \"response\": false, \"storage\": false}": [
+          "storage"
+        ],
+        "{\"acquisition\": true, \"response\": true, \"storage\": false}": [
+          "storage"
+        ],
+        "{\"acquisition\": false, \"response\": false, \"storage\": false}": [
+          "acquisition"
+        ],
+        "{\"acquisition\": false, \"response\": true, \"storage\": false}": [
+          "acquisition"
+        ]
+      }
+    },
+    "answer_only": {
+      "correct_definite": 0,
+      "indeterminate": 64,
+      "incorrect_definite": 0,
+      "ordinary_log_agreement": 64,
+      "observable_patterns": 2,
+      "patterns_with_multiple_possible_labels": 2,
+      "pattern_labels": {
+        "{\"response\": true}": [
+          "acquisition",
+          "none_observed",
+          "storage"
+        ],
+        "{\"response\": false}": [
+          "acquisition",
+          "response",
+          "retrieval",
+          "storage"
+        ]
+      }
+    }
+  }
+}

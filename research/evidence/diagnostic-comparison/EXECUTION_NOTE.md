@@ -1,0 +1,1 @@
+Execution note: first attempt failed during temporary database cleanup because Python SQLite context managers do not close connections. No summary was produced. Corrected explicit connection closure and commits before reopening; reran unchanged conditions in results-v1. The first empty results directory remains. No API calls occurred.

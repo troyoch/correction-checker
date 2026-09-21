@@ -1,0 +1,84 @@
+{
+  "id": "format-03",
+  "trace": {
+    "expected": "bullets",
+    "accepted_gate_output": [
+      "bullets"
+    ],
+    "storage": [
+      "bullets"
+    ],
+    "retrieval": [
+      "bullets"
+    ]
+  },
+  "gate_status": {
+    "accepted": true,
+    "reason": "authorized_exact_revision"
+  },
+  "gate_rows": [
+    {
+      "id": "original",
+      "user_id": 7,
+      "memory_type": "preference",
+      "title": "format",
+      "memory_key": "format",
+      "detail": "prose",
+      "active": false,
+      "superseded_by": "7465db08-25bd-4a01-a96a-dbdc8b8f39c7"
+    },
+    {
+      "user_id": 7,
+      "memory_type": "preference",
+      "title": "format",
+      "memory_key": "format",
+      "detail": "bullets",
+      "id": "7465db08-25bd-4a01-a96a-dbdc8b8f39c7",
+      "active": true,
+      "supersedes": "original",
+      "revision_evidence": "e1"
+    }
+  ],
+  "reopened_rows": [
+    {
+      "id": "original",
+      "user_id": 7,
+      "memory_type": "preference",
+      "title": "format",
+      "memory_key": "format",
+      "detail": "prose",
+      "active": false,
+      "superseded_by": "7465db08-25bd-4a01-a96a-dbdc8b8f39c7"
+    },
+    {
+      "user_id": 7,
+      "memory_type": "preference",
+      "title": "format",
+      "memory_key": "format",
+      "detail": "bullets",
+      "id": "7465db08-25bd-4a01-a96a-dbdc8b8f39c7",
+      "active": true,
+      "supersedes": "original",
+      "revision_evidence": "e1"
+    }
+  ],
+  "selected_rows": [
+    {
+      "user_id": 7,
+      "memory_type": "preference",
+      "title": "format",
+      "memory_key": "format",
+      "detail": "bullets",
+      "id": "7465db08-25bd-4a01-a96a-dbdc8b8f39c7",
+      "active": true,
+      "supersedes": "original",
+      "revision_evidence": "e1"
+    }
+  ],
+  "diagnosis": "no_observed_divergence",
+  "injected_condition": "healthy",
+  "expected_diagnosis": "no_observed_divergence",
+  "diagnosis_matches": true,
+  "retrieval_correct": true,
+  "model_response": "not_tested"
+}

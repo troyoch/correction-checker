@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "corrected_preference_restored": true,
+    "other_selected_detail_restored": true,
+    "old_claim_absent": true,
+    "excluded_detail_absent_from_package_and_restore": true,
+    "other_user_absent": true,
+    "history_and_summaries_not_transported": true,
+    "exactly_two_records": true,
+    "tampering_rejected": true,
+    "wrong_owner_rejected": true,
+    "duplicate_id_rejected": true,
+    "unsupported_schema_rejected": true,
+    "empty_selection_restores_empty": true
+  },
+  "passed": 12,
+  "total": 12,
+  "api_calls": 0,
+  "scope": "Local fresh-process export/restore. No model behavior tested. Exclusion from outgoing package is not global deletion."
+}

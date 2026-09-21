@@ -1,0 +1,3 @@
+research/evidence/** -text
+research/PROVENANCE.json -text
+research/MANIFEST_SHA256.json -text
