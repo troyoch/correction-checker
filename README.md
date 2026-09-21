@@ -35,6 +35,10 @@ python checker.py --out runs/custom --case example-case.json -- python your_adap
 
 The example custom case tests a prose-to-bullets preference. The bundled demo parser supports only the default schedule fixture; it cannot run arbitrary cases. Temporary exceptions and repeated-correction histories are not supported yet.
 
+## Optional Ollama reference connector
+
+See [the Ollama connector guide](OLLAMA_CONNECTOR.md) for an offline smoke test and opt-in local inference. It uses its own demonstration SQLite memory, not Evo or your existing application's memory. Live model compatibility remains unvalidated; offline checks generate no model responses. This extension adds no results to the paper.
+
 ## What gets checked
 
 Teach an initial value, establish a baseline, correct the value, and probe the learning conversation, a fresh conversation, after restart, and after summary refresh. Probe questions contain neither candidate answer in the supplied default case. Custom question leakage is the case author's responsibility. Later checkpoints include earlier interventions; this is not an isolated causal ablation.
