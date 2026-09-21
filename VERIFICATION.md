@@ -9,3 +9,5 @@ Performed from a clean temporary copy using Python 3.12 on Windows. No paid API,
 - Original records are untouched. One personal-budget sentence in a copied narrative was redacted and logged; source hashes and new distributed hashes are available.
 
 Known limits: historical UUID generation prevents raw-byte identity of regenerated six-fault files; original context-construction code remains private; no semantic or human-adjudication study was added. Generated results stay in temporary directories outside the source tree.
+
+Initial hosted CI passed on Ubuntu 3.10/3.12 but failed during the historical comparison script on Windows. The reproduction wrapper now resolves temporary script paths before invocation and exposes child errors. Scientific code and scoring remain unchanged. Final hosted results are recorded on the PR.

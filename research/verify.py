@@ -37,7 +37,12 @@ def records():
             require(sorted(answers,key=lambda x:x['id'])==sorted(read(results/'answers.json'),key=lambda x:x['id']),'Extracted answers mismatch')
         counts[suite]={'recorded_outputs_verified':count,'input_tokens':input_tokens,'output_tokens':output_tokens}
     return counts
-def run(script):subprocess.run([sys.executable,str(script)],check=True,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True)
+def run(script):
+    # Canonicalize Windows short temporary paths before the historical script
+    # compares __file__ against its resolved ROOT for its generated manifest.
+    result=subprocess.run([sys.executable,str(script.resolve())],stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True)
+    if result.returncode:
+        raise RuntimeError(script.name+' failed:\n'+result.stdout+'\n'+result.stderr)
 def normalize_ids(obj):
     # Each six-fault execution generates one replacement UUID. Preserve all other fields.
     return re.sub(r'\b[0-9a-f]{8}(?:-[0-9a-f]{4}){3}-[0-9a-f]{12}\b','<generated-uuid>',json.dumps(obj,sort_keys=True))
